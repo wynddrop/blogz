@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  
+    <head>
+        <a href="buildablog" style="margin-right:25px;">Main Blog Page</a>
+            
+        <a href="newpost">Add a Blog Entry</a>
+        <title>{{title}}</title>
+        <style>
+                input[name="odd"] { 
+                    background:none!important;
+                    border:none; 
+                    color: blue;
+                    padding:0!important;
+                    font-size: 25px;
+                    font-weight: bold;
+                    /*border is optional*/
+                    border-bottom:1px solid blue; 
+                    cursor: pointer;
+                }
+        </style>
+    </head>
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <a href="buildablog" style="margin-right:25px;">Main Blog Page</a>
+    <a href="newpost">Add a Blog Entry</a>
+    <head>
+        <title >Add a Blog Entry</title>
+        <style>
+                .error {
+                    color: red;
+                }
+        </style>
+    </head>
+<body>
+
+    <h1 align="center">Add a Blog Entry</h1>
+    <form  method='post'>
+        <div style="margin-left:35px;">
+            <label for="blog_title" style="display:block;">Title for your new blog:</label>
+            <input type="text" name='blog_title' style="display:block;width:240px;" />
+            <span class="error" style="display:block;">{{blog_title_error}}</span>
+        </div>
+    </br>
+        <div style="margin-left:35px;">
+            <label  style="display:block;" for="blog_body">Your new blog:</label>
+            <input  style="display:block;width:340px;height:240px;" type="text" name='blog_body' />
+            <span class="error" style="display:block;">{{blog_body_error}}</span>
+        </div>
+    </br>
+        <input type="submit" value='Add Entry'  style="margin-left:35px;display:block;"/>
+    </form>
+
+</body>
+</html>
