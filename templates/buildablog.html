@@ -2,18 +2,7 @@
 
 {% block content %}
     <h1 align="center">Build a Blog</h1>
-    <form method='post'>
-        <label>
-            New Blog title:
-            <input type="text" name='blog_title' />
-        </label>
-        
-        <label>
-            New Blog body:
-            <input type="text" name='blog_body' />
-        </label>
-        <input type="submit" value='Add Blog' />
-    </form>
+
     <hr/>
     {% if blogs|length == 0 %}
     <p>No blogs yet</p>
@@ -23,9 +12,10 @@
             {% for blog in blogs %}
             <form method="POST" action="/finishedpost" style="display:inline-block;">
                 <input type="hidden" name="blog-id" value="{{blog.id}}" />
-                <input  name="odd" type="submit" value={{blog.title}} />
+                <input  style="padding:0px;font-size:25px;white-space:nowrap;text-align:left;font-weight:bold;background:none;border:none;" type="submit" value="{{blog.title}}"" />
                 
-                </br>
+
+                </br></br>
                 <a>{{blog.body}}</a>
             </form>
 
