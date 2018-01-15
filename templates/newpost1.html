@@ -1,6 +1,17 @@
-{% extends "base.html" %}
+<!doctype html>
+<html>
+    <a href="buildablog" style="margin-right:25px;">Main Blog Page</a>
+    <a href="newpost">Add a Blog Entry</a>
+    <head>
+        <title >New Post</title>
+        <style>
+                .error {
+                    color: red;
+                }
+        </style>
+    </head>
+<body>
 
-{% block content %}
     <h1 align="center">New Post</h1>
     <form  method='post'>
         <div style="margin-left:35px;">
@@ -18,4 +29,5 @@
         <input type="submit" value='Add Entry'  style="margin-left:35px;display:block;"/>
     </form>
 
-{% endblock %}
+</body>
+</html>
