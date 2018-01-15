@@ -172,10 +172,8 @@ def blog():
 @app.route('/allblogs', methods=['GET'])
 def blogs():
    
-
-    blogs = Blog.query.all()
-
-    
+    blogs = Blog.query.all() 
+    users = User.query.all()
     
     return render_template('allblogs.html', blogs=blogs)
 

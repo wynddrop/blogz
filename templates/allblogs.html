@@ -4,12 +4,12 @@
     <h1>blog posts!</h1>
 
     <hr/> 
-    {% if blogs|length == 0 %}
+    {% if blogs|length == 0 %}s
         <p>No blogs yet</p>
     {% else %}
         <ul>
             {% for blog in blogs %}
-            <form method="POST" action="/blog" style="display:inline-block;">
+            <form method="POST" action="/blogs" style="display:inline-block;">
                 <input type="hidden" name="blog-id" value="{{blog.id}}" />
                 <input  style="padding:0px;font-size:25px;white-space:nowrap;
                 text-align:left;font-weight:bold;background:none;border:none;" 
@@ -18,7 +18,7 @@
 
                 </br></br>
                 <a>{{blog.body}}</a>
-                <p>Written by <a href="/blogs">{{user.username}}</a></p>
+                <p>Written by <a href="/blogs">{{blog.owner_id.username}}</a></p>
             </form>
 
     
