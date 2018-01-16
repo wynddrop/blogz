@@ -123,7 +123,7 @@ def signup():
                 db.session.add(new_user)
                 db.session.commit()
                 session['username'] = username
-                return render_template('newpost.html')
+                return redirect('/newpost')
             else:
                 username_error = 'User found, please enter a different username.'
                 return render_template('signup.html',username_error=username_error)
