@@ -5,5 +5,5 @@
     </br></br>
     <a>{{blog.body}}</a>
     </br></br>
-    <p>Written by <a href="/blog?userid={{user.id}}">{{username}}</a></p>
+    <p>Written by <a href="/blog?userid={{blog.owner.id}}">{{blog.owner.username}}</a></p>
 {% endblock %}

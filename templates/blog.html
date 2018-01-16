@@ -9,7 +9,7 @@
     {% else %}
         <ul>
             {% for blog in blogs %}
-            <form method="POST" action="/blog" style="display:inline-block;">
+            <form method="POST" action="/finishedpost" style="display:inline-block;">
                 <input type="hidden" name="blog-id" value="{{blog.id}}" />
                 <input  style="padding:0px;font-size:25px;white-space:nowrap;
                 text-align:left;font-weight:bold;background:none;border:none;" 
@@ -18,7 +18,7 @@
 
                 </br></br>
                 <a>{{blog.body}}</a>
-                <p>Written by <a href="/blog">{{owner.username}}</a></p>
+                <p>Written by <a href="/blog?userid={{blog.owner.id}}">{{blog.owner.username}}</a></p>
             </form>
 
     
